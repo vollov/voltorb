@@ -91,7 +91,6 @@ class LoginView(APIView):
         # success, login and respond
         login(request, account)
         serialized = UserSerializer(account)
-        
         return Response(serialized.data, status=status.HTTP_200_OK)
 
 
